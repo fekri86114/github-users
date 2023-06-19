@@ -49,49 +49,48 @@ android {
 
 dependencies {
 
-    def ui_tool_version = "1.4.3"
-
     implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
     implementation 'androidx.activity:activity-compose:1.7.2'
-    implementation "androidx.compose.ui:ui:$ui_tool_version"
-    implementation "androidx.compose.ui:ui-tooling-preview:$ui_tool_version"
-    implementation "androidx.compose.material:material:$ui_tool_version"
+    implementation "androidx.compose.ui:ui:$compose_ui_version"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
+    implementation "androidx.compose.material:material:$compose_ui_version"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$ui_tool_version"
-    debugImplementation "androidx.compose.ui:ui-tooling:$ui_tool_version"
-    debugImplementation "androidx.compose.ui:ui-test-manifest:$ui_tool_version"
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
 
-    // system ui controller
+    // System Ui Controller
     implementation 'com.google.accompanist:accompanist-systemuicontroller:0.17.0'
 
-    // navigation compose
-    implementation "androidx.navigation:navigation-compose:2.6.0"
+    // Navigation
+    implementation "androidx.navigation:navigation-compose:2.5.3"
 
-    // livedata state
+    // LiveData-State
     implementation "androidx.compose.runtime:runtime-livedata:$compose_ui_version"
 
-    // coil
+    // Coil
     implementation "io.coil-kt:coil-compose:2.3.0"
 
-    // coroutines android
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
-
-    // lifecycle - viewModel
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
 
-    // koin
+    // Koin
     implementation "dev.burnoo:cokoin:1.0.0"
     implementation "dev.burnoo:cokoin-android-viewmodel:1.0.0"
     implementation "dev.burnoo:cokoin-android-navigation:1.0.0"
 
-    // lottie compose
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
+    // Lottie
     implementation "com.airbnb.android:lottie-compose:5.2.0"
 
-    // room
+    // Room
     implementation "androidx.room:room-ktx:2.6.0-alpha01"
     kapt "androidx.room:room-compiler:2.5.1"
-
 }
