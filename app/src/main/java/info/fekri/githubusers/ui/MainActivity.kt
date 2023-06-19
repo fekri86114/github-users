@@ -1,4 +1,4 @@
-package info.fekri.githubusers
+package info.fekri.githubusers.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = ItemBackground
                 ) {
-                    Text(text = "Will be completed!")
+
                 }
             }
         }
