@@ -3,6 +3,7 @@ package info.fekri.githubusers.ui.features.main
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -58,15 +59,19 @@ fun MainScreen() {
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        MainTopToolbar()
+
         PopularItemSetup()
     }
 
 }
 
+// ---------------------------------------------------
+
 @Composable
 fun PopularItemSetup() {
 
-    LazyColumn {
+    LazyColumn(contentPadding = PaddingValues(vertical = 4.dp)) {
         items(10) {
             PopularItem()
         }
@@ -83,7 +88,7 @@ fun PopularItem() {
         shape = Shapes.medium,
         modifier = Modifier
             .fillMaxWidth(0.9f)
-            .height(100.dp)
+            .height(106.dp)
             .padding(vertical = 4.dp),
         backgroundColor = GrayDark,
         elevation = 4.dp
@@ -122,20 +127,20 @@ fun PopularItem() {
                     )
                 )
 
-                Spacer(modifier = Modifier.height(8.dp))
-
                 Text(
                     text = "@developer_id",
                     style = TextStyle(
-                        fontSize = 15.sp,
+                        fontSize = 14.sp,
                         color = TextColor
                     )
                 )
 
+                Spacer(modifier = Modifier.height(8.dp))
+
                 Text(
                     text = "Developer desc",
                     style = TextStyle(
-                        fontSize = 18.sp,
+                        fontSize = 13.sp,
                         color = Color.White
                     )
                 )
@@ -147,3 +152,16 @@ fun PopularItem() {
     }
 
 }
+
+// ---------------------------------------------
+
+@Composable
+fun MainTopToolbar() {
+    Surface(
+        modifier = Modifier.fillMaxWidth().height(80.dp),
+        color = GrayDark
+    ) {
+
+    }
+}
+
